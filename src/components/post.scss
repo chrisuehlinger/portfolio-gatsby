@@ -1,0 +1,18 @@
+.blog-post {
+  max-width: 700px;
+  margin: 0 auto;
+  figure {
+    figcaption {
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+
+  p code {
+    background: rgb(42, 33, 57);
+    color: rgb(253, 253, 253);
+    text-shadow: rgb(0, 23, 22) 0px 0px 1px, rgba(3, 237, 249, 0.46) 0px 0px 2px, rgba(3, 237, 249, 0.46) 0px 0px 3px, rgba(3, 237, 249, 0.46) 0px 0px 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}

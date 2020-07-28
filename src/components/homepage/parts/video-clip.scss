@@ -1,0 +1,9 @@
+.video-clip {
+  video {
+    max-width: 100%;
+    visibility: hidden;
+    &.hidden {
+      display: none;
+    }
+  }
+}

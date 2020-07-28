@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&family=Roboto&family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html, body {
+  color: white;
+  background-color: black;
+}
+
+a, a:visited {
+  color: dodgerblue;
+}
+
+.page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.background-canvas {
+  position: fixed;
+  /* background-color: black; */
+  top:0;
+  left:0;
+  transition: opacity 1s ease-in;
+}

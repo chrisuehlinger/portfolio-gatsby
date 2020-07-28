@@ -1,0 +1,52 @@
+- id: UNSHATTERING
+  title: "Unshattering the Audience: Building Theatre on the Web in 2020"
+  company: "charmCityJS, July 2020"
+  clips: []
+  description:
+    - "This talk was based on my blog post of the same name, and was a quick run-through of how I built the software that ran Shattered Space. I don't have a video of this one, and my slides are a bit incomplete (it was heavily demo-focused), so I'd recommend checking out the blog post instead."
+- id: THETIMEOUTAGAIN
+  title: "Let's Do The Timeout Again: Using Javascript to make Projections for Theatre"
+  company: "charmCityJS, February 2019"
+  clips: 
+    - id: timeout-clip
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/timeout-clip.mp4
+      width: 16
+      height: 9
+  description:
+    - "At this point I had only done projections for two shows (Rocky and Thank You, Dad) but a lot of the concepts I cover in here (particularly ARKit and basic WebRTC stuff) formed the basis for a lot of my future projections work as well. This is also the only talk I've done that was recorded at the meetup where it was given, so I recommend checking that out."
+- id: COPYWHAT
+  title: "Copywhat? Licenses, Patents and that Weird React Thing"
+  company: "charmCityJS, November 2017"
+  clips: []
+  description:
+    - "This talk was a response to that whole thing where Facebook changed up the licensing of React (and other projects) in a way that created a lot of confusion about people's liability. Many people working in software have only a cursory knowledge of how software IP works, so it felt like a good time to review the basics of IP law and how it affects us. In a blistering 25 minutes I rampaged through the concepts of Copyright, Fair Use, Licenses, Patents, Patent Grants and then the issues surrounding Facebook's actions and what they meant (spoiler: it's a bit unclear but it might be fine but I am not your lawyer)."
+- id: INTROD3
+  title: "Introduction to D3.js"
+  company: "charmCityJS, February 2017"
+  clips: []
+  description:
+    - "D3 is an incredible tool that many developers find intimidating at first. This talk was a basic tutorial in making a bar chart in D3, but with a focus on how you don't need to understand all of D3 in order to be very proficient in using it. I also highlighted the awesome amount of examples on bl.ocks.org and how you could use them as both inspiration and as a starting point for your own visualizations."
+- id: INTROTHREEJS
+  title: "Three.js and WebGL"
+  company: "charmCityJS, December 2016"
+  clips: []
+  description:
+    - "This talk was a brief intro to working with Three.js. I began with a supercut of some of the amazing stuff the community has made and then went on to a walkthrough of the official Three.js tutorial, showing the results of each step and explaining how each of the new vocabulary terms (Geometry, Materials, Textures, etc.) relate to each other."
+- id: TJFL
+  title: "Teaching JavaScript as a Foreign Language"
+  company: "charmCityJS, March 2016"
+  clips:
+    - id: tjfl-slide
+      type: image
+      src: images/tjfl.png
+      path: images/tjfl.png
+      width: 16
+      height: 9
+    - id: timeout-clip2
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/timeout-clip.mp4
+      width: 16
+      height: 9
+  description:
+    - "This is a talk I've given at charmCityJS and the Loyola University ACM series (which was recorded). It's about my experience teaching programming in Thailand, and some of the lessons I learned that helped me become a better teacher and communicator."

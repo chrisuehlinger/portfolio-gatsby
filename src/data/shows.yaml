@@ -1,0 +1,158 @@
+- id: SHATTEREDSPACE
+  title: Shattered Space
+  company: The Scattered Players, June 2020
+  clips: []
+  description:
+    - "Role: Producer, Full Stack Engineer, Actor (Chad Fastcannon), VO/Mocap Actor (Colonel Panic)"
+    - "Tech: WebRTC, WebGL, Three.js, React, Redux, Redux Saga, Docker, Janus WebRTC Server, Express, Websockets, ARKit"
+    - "This was a fully-online interactive piece of theatre produced during (and as a response to) the COVID-19 Pandemic. You can read more about this show (and my process for building all the tech it ran on) on my blog."
+- id: LOVEANDINFO
+  title: Love and Information
+  company: Fells Point Corner Theatre, January 2020
+  clips:
+    - id: god-trimmed
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/god-trimmed.mp4
+      width: 16
+      height: 9
+    - id: recluse-trimmed
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/recluse-trimmed.mp4
+      width: 16
+      height: 9
+    - id: dream-trimmed
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/dream-trimmed.mp4
+      width: 16
+      height: 9
+  description:
+    - "Role: Projections Designer, Engineer, Video Editor (also staged and shot some of the video pieces)"
+    - "Tech: Express, Websockets, QLab, Adobe After Effects, Adobe Premiere Pro, WebRTC, Nexrender, Raspberry Pi"
+    - "This show consisted of about 50 sketch-length pieces about communication and relationships in the digital age. Some of these pieces were accompanied by projections, some involved live communication between onstage and projected offstage actors via WebRTC, others were completely filmed and then edited by me, one of them involved coating the walls with nebulae using 7 projectors driven by Raspberry Pis."
+- id: KUMITE
+  title: Space Kumite
+  company: Baltimore Rock Opera Society, November 2019
+  clips:
+    - id: kumite-making-of
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/kumite-making-of.mp4
+      width: 16
+      height: 9
+    - id: galadriel-biome
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/galadriel-biome.mp4
+      width: 16
+      height: 9
+    - id: biome-intro
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/biome-intro.mp4
+      width: 16
+      height: 9
+  description:
+    - "Role: Video Designer, Engineer, Live Voice/Mocap Actor (Biome and Nav)"
+    - "Tech: Unity, ARKit, Electron, OSC (over Websockets), QLab"
+    - "This was a Space Scifi musical where the audience could make decisions about how the show would progress. I built a system that allowed 3 voice/mocap actors (including myself) to perform live as 5 different \"AI\" characters (whose voices were modulated with QLab effects)."
+- id: LIZZIE
+  title: Lizzie, the Musical
+  company: Guerrilla Theatre Front, October 2019
+  clips:
+    - id: burn-the-old-thing-up
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/burn-trimmed.mp4
+      width: 16
+      height: 9
+    - id: mercury-rising
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/mercury-trimmed.mp4
+      width: 16
+      height: 9
+    - id: lizzie-wings
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/wings-trimmed.mp4
+      width: 16
+      height: 9
+    - id: heads-off
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/heads-off.mp4
+      width: 16
+      height: 9
+  description:
+    - "Role: Projection Designer, Video Editor"
+    - "Tech: QLab, After Effects, Premiere Pro, WebGL, Unity, Electron, Siphon"
+    - "This show (about real-life historical person Lizzie Borden) was less technical than many of the others I've worked on, and my work was more focused on building complex QLab cues using sequences I built in Adobe After Effects."
+- id: SHAKESVILLE
+  title: Welcome to Shakesville
+  company: Baltimore Rock Opera Society, May 2019
+  clips:
+    - id: deputy-mayor
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/deputy-mayor.mp4
+      width: 9
+      height: 16
+    - id: shakes-monitor
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/shakes-monitor.mp4
+      width: 16
+      height: 9
+    - id: shakes-portal
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/shakes-portal.mp4
+      width: 16
+      height: 9
+  description:
+    - "Role: Projection Designer, Engineer (live video monitoring system)"
+    - "Tech: WebGL, WebRTC, ARKit, Electron, OSC (over Websockets)"
+    - "This was an excellent locally written musical and was my first time working with the BROS. My main contribution was the portal between our world and Shakesville, which I built using an open source WebGL fluid simulator. I also built a live video monitoring system that could run over the LAN using WebRTC and the Janus media server, which allowed the band (who were backstage) to see what was happening onstage and take their cues. Towards the end of the run I introduced an ARKit-based effect that allowed the Deputy Mayor (the show's supervillain) to perform her first song of the show via live motion capture."
+- id: TYD
+  title: Thank You, Dad
+  company: Rapid Lemon Productions, January 2019
+  clips:
+    - id: tyd-rtc
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/tyd-rtc.mp4
+      width: 16
+      height: 9
+    - id: tyd-vo4
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/vo4.mp4
+      width: 16
+      height: 9
+    - id: tyd-vo9
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/vo9.mp4
+      width: 16
+      height: 9
+  description:
+    - "Role: Projection Designer, Video Editor"
+    - "Tech: Adobe After Effects, Adobe Premiere Pro, Express, WebRTC, WebSockets"
+    - "This was a locally written one-man show about the cult leader Jim Jones. It featured heavy use of sequences I built using Adobe After Effects (this was my first time using it), as well as one effect where I captured live video of the character from an iPhone embedded in his pulpit, streamed it over the Wifi via WebRTC and projected it behind him for a sort of \"Wizard of Oz\" effect. I hadn't yet heard about software like QLab, so for this show I build my own cueing webapp using Express and Websockets."
+- id: ROCKY2018
+  title: The Rocky Horror Show
+  company: Haute Patooties, October 2018
+  clips:
+    - id: fsedkjsdkj
+      type: image
+      path: images/crocus.png
+      width: 16
+      height: 9
+    - id: rocky-lips
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/rocky-lips.mp4
+      width: 16
+      height: 9
+    - id: sf-trimmed
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/sf-trimmed.mp4
+      width: 16
+      height: 9
+    - id: time-warp-clip
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/time-warp.mp4
+      width: 16
+      height: 9
+  description:
+    - "Role: Projection Designer, Actor (Phantom)"
+    - "Tech: ARKit, WebRTC, WebGL, and Neural Style Transfer applied to old scifi movies"
+    - "I got my start in Projection work creating an effect using ARKit that allowed the actor playing Magenta to perform a pre-show monologue as the iconic Lips from the Rocky Horror Picture Show via live motion capture. I later built a video sequence for Science Fiction/Double Feature using clips from the mentioned movies but thrown through a Neural Style Transfer algorithm, as well as a 3D sequence built with Three.js and one short moment where we cut to a webcam pointed at the audience."
+
+
