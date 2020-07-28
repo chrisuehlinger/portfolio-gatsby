@@ -17,10 +17,11 @@ THREE.Cache.enabled = true;
 const ENTIRE_SCENE = 0, GLITCH_SCENE = 1, DIM_SCENE = 2;
 
 export default class BackgroundScene {
-  constructor(canvas, state, onLoad) {
+  constructor(canvas, state, onProgress, onLoad) {
     this.canvas = canvas;
     this.state = state;
 
+    this.onProgress = onProgress || function() {};
     this.onLoad = onLoad || function() {};
     
     let globalSeed = Math.round(Math.random()*1e9);
@@ -144,6 +145,11 @@ export default class BackgroundScene {
     // }
 
     this.clock = new THREE.Clock();
+
+    this.loadingManager.onProgress = ( url, itemsLoaded, itemsTotal) => {
+      console.log( 'PROGRESS Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+      this.onProgress(Math.round(100*itemsLoaded/itemsTotal));
+    }
 
     this.loadingManager.onLoad = () => {
       this.onLoad();

@@ -4,6 +4,7 @@ import {
   EXIT_ZONE,
   PLAY_VIDEO,
   STOP_VIDEO,
+  SET_LOADING_PROGRESS,
   SET_LOADING_INDICATOR,
   SET_MUTE
 } from './actions';
@@ -14,6 +15,7 @@ const initialState = {
   zoneHistory: [],
   currentShow: null,
   currentVideo: null,
+  loadingProgress: 0,
   isLoaded: false,
   isMuted: true
 };
@@ -45,6 +47,10 @@ const reducer = (state = initialState, action) => {
       if(state.currentVideo && state.currentVideo.id === action.video.id) {
         nextState.currentVideo = null;
       }
+      return nextState;
+    }
+    case SET_LOADING_PROGRESS: {
+      nextState.loadingProgress = action.loadingProgress;
       return nextState;
     }
     case SET_LOADING_INDICATOR: {

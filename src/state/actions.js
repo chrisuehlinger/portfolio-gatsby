@@ -23,6 +23,11 @@ export const stopVideo = (video) => {
   return { type: STOP_VIDEO, video };
 }
 
+export const SET_LOADING_PROGRESS = `SET_LOADING_PROGRESS`;
+export const setLoadingProgress = (loadingProgress) => {
+  return { type: SET_LOADING_PROGRESS, loadingProgress };
+}
+
 export const SET_LOADING_INDICATOR = `SET_LOADING_INDICATOR`;
 export const setLoadingIndicator = (isLoaded) => {
   return { type: SET_LOADING_INDICATOR, isLoaded };

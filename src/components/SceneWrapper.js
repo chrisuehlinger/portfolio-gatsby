@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import BackgroundScene from '../3d/background-scene';
+import { useSelector, useDispatch } from 'react-redux'
 import {
+  setLoadingProgress,
   setLoadingIndicator
 } from '../state/actions';
 
@@ -10,6 +12,7 @@ export default class SceneWrapper extends React.Component {
     this.state = {
     };
 
+    this.sceneProgress = this.sceneProgress.bind(this);
     this.sceneDidLoad = this.sceneDidLoad.bind(this);
   }
 
@@ -18,7 +21,7 @@ export default class SceneWrapper extends React.Component {
 
   componentDidMount(){
     const { reducerState } = this.props;
-    this.scene = new BackgroundScene(this.refs.backgroundCanvas, reducerState, this.sceneDidLoad);
+    this.scene = new BackgroundScene(this.refs.backgroundCanvas, reducerState, this.sceneProgress, this.sceneDidLoad);
   }
 
   componentDidUpdate(){
@@ -26,6 +29,10 @@ export default class SceneWrapper extends React.Component {
       const { reducerState } = this.props;
       this.scene.updateScene(reducerState);
     }
+  }
+
+  sceneProgress(progress) {
+    this.props.dispatch(setLoadingProgress(progress));
   }
 
   sceneDidLoad() {
