@@ -57,7 +57,9 @@ export default class VideoClips {
       let y = this.clipGroupTargetRotation + 0.25 * Math.sin(timeElapsed/5);
       this.clip.mesh.rotation.set(x,y,0);
     }
-    this.clipGroup.position.x = (window.innerWidth > 768) ? -4.5 : 0;
+    let clipScale = (window.innerWidth > 768) ? window.innerWidth / 1800 : window.innerWidth / 720; ;
+    this.clipGroup.scale.set(clipScale, clipScale, clipScale)
+    this.clipGroup.position.x = (window.innerWidth > 768) ? -3.84*clipScale : 0;
     this.clipGroup.quaternion.slerp(this.clipGroupTargetQuaternion, 3*timeDelta);
     this.oldClips.map(oldClip => {
       oldClip.material.opacity *= (1-timeDelta);

@@ -1,7 +1,11 @@
 .video-clip {
   video {
     max-width: 100%;
-    visibility: hidden;
+
+    .not-boring & {
+      visibility: hidden;
+    }
+
     &.hidden {
       display: none;
     }

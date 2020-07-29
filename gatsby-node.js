@@ -20,6 +20,13 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   const typeDefs = [
     "type TalksYaml implements Node { clips: [Clip] }",
     "type ShowsYaml implements Node { clips: [Clip] }",
+    `type DemosYaml implements Node @dontInfer {
+      id: String
+      title: String
+      company: String
+      description: [String]
+      clips: [Clip]
+    }`,
     schema.buildObjectType({
       name: "Clip",
       fields: {

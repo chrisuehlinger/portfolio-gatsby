@@ -6,7 +6,8 @@ import {
   STOP_VIDEO,
   SET_LOADING_PROGRESS,
   SET_LOADING_INDICATOR,
-  SET_MUTE
+  SET_MUTE,
+  TOGGLE_BORING_MODE
 } from './actions';
 
 const initialState = {
@@ -16,8 +17,9 @@ const initialState = {
   currentShow: null,
   currentVideo: null,
   loadingProgress: 0,
-  isLoaded: false,
-  isMuted: true
+  isLoaded: ( typeof window === 'undefined' ? false : localStorage.getItem('isBoring') === 'true'),
+  isMuted: true,
+  isBoring: ( typeof window === 'undefined' ? false : localStorage.getItem('isBoring') === 'true')
 };
 
 const reducer = (state = initialState, action) => {
@@ -59,6 +61,12 @@ const reducer = (state = initialState, action) => {
     }
     case SET_MUTE: {
       nextState.isMuted = action.isMuted;
+      return nextState;
+    }
+    case TOGGLE_BORING_MODE: {
+      nextState.isBoring = action.isBoring;
+      nextState.isLoaded = action.isBoring;
+      localStorage.setItem('isBoring', '' + action.isBoring);
       return nextState;
     }
     default: {

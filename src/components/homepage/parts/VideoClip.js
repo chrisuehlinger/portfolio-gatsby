@@ -23,6 +23,7 @@ const VideoClip = ({ clip, muted, isPlaying, onEnded }) => {
         ref={videoEl}
         crossOrigin="anonymous"
         preload="auto"
+        playsInline
         onEnded={ onEnded }
         muted={muted}
       ></video>

@@ -54,7 +54,7 @@ export default class BackgroundScene {
     this.renderer.physicallyCorrectLights = true;
     
     this.scene = new THREE.Scene();
-    let skyboxRes = 1024;
+    let skyboxRes = 2048;
     this.skybox = new THREE.CubeTextureLoader(this.loadingManager).setPath(`https://cdn.chrisuehlinger.com/3d/skybox/${skyboxRes}/`).load([
       'right.png', 'left.png',
       'top.png', 'bottom.png',

@@ -15,7 +15,7 @@ export default class Clip {
       map: this.texture
     });
 
-    this.geometry = new THREE.PlaneBufferGeometry(width/2, height/2);
+    this.geometry = new THREE.PlaneBufferGeometry(width/2.5, height/2.5);
 
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.mesh.layers.enable(DIM_SCENE);

@@ -24,8 +24,16 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-transformer-yaml`,
+      resolve: 'gatsby-transformer-yaml-full',
       options: {
+        plugins: [
+          {
+            resolve: 'gatsby-yaml-full-markdown',
+            options: {
+              unwrapSingleLine: true
+            }
+          }
+        ],
       },
     },
     {
@@ -134,13 +142,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-default-mdx-basic',
-        short_name: 'starter',
+        name: `Chris Uehlinger's Website`,
+        short_name: 'Chris Uehlinger',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/pages/images/gatsby-icon.png', // This path is relative to the root of the site.
+        display: 'standalone',
+        icon: 'src/pages/images/icon.png', // This path is relative to the root of the site.
       },
     },
     // 'gatsby-plugin-ngrok-tunneling',

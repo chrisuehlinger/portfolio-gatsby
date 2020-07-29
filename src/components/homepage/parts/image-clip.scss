@@ -1,6 +1,10 @@
 .image-clip {
   width: 100%;
-  visibility: hidden;
+  min-height: 100px;
+  
+  .not-boring & {
+    visibility: hidden;
+  }
   .hidden {
     display: none;
   }

@@ -56,6 +56,11 @@
   title: Lizzie, the Musical
   company: Guerrilla Theatre Front, October 2019
   clips:
+    - id: fsedkjsdkj
+      type: image
+      path: images/crocus.png
+      width: 16
+      height: 9
     - id: burn-the-old-thing-up
       type: video
       src: https://cdn.chrisuehlinger.com/show-videos/burn-trimmed.mp4

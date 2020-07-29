@@ -19,7 +19,7 @@ const BlogIndex = ({ data }) => {
 
   return (
     <Layout>
-      <h1>Awesome MDX Blog</h1>
+      <h1>Blog</h1>
       <ul>
         {posts.map(({ node: post }) => (
           <li key={post.id}>

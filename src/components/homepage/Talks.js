@@ -7,6 +7,7 @@ import './talks.scss'
 const Talks = () => (
   <HomepageWaypoint zone="TALKS">
     <div className="talks-page" id="talks">
+      <h2>Talks</h2>
       <StaticQuery
         query={graphql`
           query TalkQuery {

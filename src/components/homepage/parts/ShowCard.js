@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useMemo, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import {
   playVideo,
   stopVideo,
@@ -93,7 +94,7 @@ const ShowCard = (show) => {
           </div>
         }
         {
-          description.map((paragraph, i) => <p key={i}>{paragraph}</p>)
+          description.map((paragraph, i) => <p key={i} dangerouslySetInnerHTML={{ __html: paragraph}} />)
         }
       </div>
     </div>

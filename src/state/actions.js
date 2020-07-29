@@ -37,3 +37,8 @@ export const SET_MUTE = `SET_MUTE`;
 export const setMute = (isMuted) => {
   return { type: SET_MUTE, isMuted };
 }
+
+export const TOGGLE_BORING_MODE = `TOGGLE_BORING_MODE`;
+export const toggleBoringMode = (isBoring) => {
+  return { type: TOGGLE_BORING_MODE, isBoring };
+}

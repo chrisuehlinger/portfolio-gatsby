@@ -8,6 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  backdrop-filter: blur(5px);
 
   &:before {
     content:'';
@@ -19,7 +20,7 @@
     background-color: rgba(255,255,255,0.5);
   }
 
-  a, a:visited {
+  a, a:visited, button {
     text-decoration: none;
     color: rgba(0,0,0,0.75);
     font-family: 'Lexend Zetta', sans-serif;
@@ -58,11 +59,13 @@
       justify-content: flex-end;
       li {
         margin: 5px;
-        a {
+        a, button {
           padding: 10px;
           text-transform: uppercase;
           border-radius: 2px;
+          border-width: 0;
           transition: background-color 1s ease-out;
+          background-color: transparent;
           font-size: 12px;
           &:hover {
             background-color: rgba(255,255,255,0.5);

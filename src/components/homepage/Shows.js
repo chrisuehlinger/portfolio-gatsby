@@ -7,6 +7,7 @@ import './shows.scss'
 const Shows = () => (
   <HomepageWaypoint zone="SHOWS">
     <div className="shows-page" id="shows">
+      <h2>Shows</h2>
       <StaticQuery
         query={graphql`
           query ShowQuery {

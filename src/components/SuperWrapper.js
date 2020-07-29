@@ -3,7 +3,6 @@ import { StaticQuery, graphql } from 'gatsby'
 import { useSelector, useDispatch } from 'react-redux'
 import {useTransition, animated, config} from 'react-spring'
 import SceneWrapper from './SceneWrapper'
-// import LoadingIndicator from './LoadingIndicator'
 import Header from './header';
 
 
@@ -19,7 +18,8 @@ const SuperWrapper =  (props) => {
   const {
     zone,
     isLoaded,
-    loadingProgress
+    loadingProgress,
+    isBoring
   } = reducerState;
 
   
@@ -31,8 +31,8 @@ const SuperWrapper =  (props) => {
   });
 
   return (
-    <div className="page-wrapper">
-      <SceneWrapper dispatch={dispatch} reducerState={reducerState}/>
+    <div className={ "page-wrapper" + (isBoring ? ' is-boring' : ' not-boring') }>
+      {!isBoring && <SceneWrapper dispatch={dispatch} reducerState={reducerState}/> }
       <div className={'inner-page-wrapper ' + (isLoaded ? 'has-loaded' : 'is-loading')}> 
         <StaticQuery
           query={graphql`
@@ -46,7 +46,7 @@ const SuperWrapper =  (props) => {
           `}
           render={data => (
             <>
-              <Header siteTitle={data.site.siteMetadata.title} path={path} zone={zone}/>
+              <Header siteTitle={data.site.siteMetadata.title} path={path} zone={zone} isBoring={isBoring}/>
               {children}
               { 
                 transitions.map(({ item, key, props }) =>
