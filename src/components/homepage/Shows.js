@@ -17,6 +17,7 @@ const Shows = () => (
                 description
                 id
                 title
+                url
                 clips {
                   height
                   id

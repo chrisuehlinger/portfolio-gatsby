@@ -4,7 +4,8 @@ import { useDispatch } from 'react-redux';
 import {
   enterZone,
   exitZone
-} from '../state/actions';
+} from '../state/actions'
+import Swoop from '../components/Swoop'
 import FadeLink from '../components/FadeLink'
 import Layout from '../components/layout'
 
@@ -18,7 +19,7 @@ const BlogIndex = ({ data }) => {
   }, [dispatch]);
 
   return (
-    <Layout>
+    <Layout transitionComponent={Swoop}>
       <h1>Blog</h1>
       <ul>
         {posts.map(({ node: post }) => (

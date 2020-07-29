@@ -50,24 +50,43 @@
   }
 }
 
+
+
+.loading-indicator {
+  font-family: 'Lexend Zetta', sans-serif;
+  font-size: 5vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
 @media screen and (min-width: 769px) {
   .homepage-body {
   
-    .not-boring &:before {
-      content: '';
-      pointer-events: none;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100%;
-      background:linear-gradient(
-        to bottom, 
-        rgba(0,0,0,1) 0%,
-        rgba(0,0,0,0) 50%,
-        rgba(0,0,0,1) 100%);
-    }
+    // .not-boring &:before {
+    //   content: '';
+    //   pointer-events: none;
+    //   position: fixed;
+    //   z-index: 1;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100vw;
+    //   height: 100vh;
+    //   background:linear-gradient(
+    //     to bottom, 
+    //     rgba(0,0,0,1) 0%,
+    //     rgba(0,0,0,0) 25%,
+    //     rgba(0,0,0,0) 75%,
+    //     rgba(0,0,0,1) 100%);
+    // }
   }
 
 }

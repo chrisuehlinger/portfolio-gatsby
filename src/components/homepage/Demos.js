@@ -17,6 +17,7 @@ const Demos = () => (
                 description
                 id
                 title
+                url
                 clips {
                   height
                   id

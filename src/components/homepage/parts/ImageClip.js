@@ -4,15 +4,6 @@ import './image-clip.scss';
 
 const ImageClip = ({ clip, isPlaying, onEnded }) => {
   const { id, image } = clip;
-  // useEffect(() => {
-  //   if(isPlaying) {
-  //     videoEl.current.play();
-  //   } else {
-  //     videoEl.current.pause();
-  //     videoEl.current.currentTime = 0;
-  //   }
-  // }, [isPlaying]);
-  console.log('IMAGE?', image);
   return (
     <div className="image-clip">
       <Img

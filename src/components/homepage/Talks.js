@@ -17,6 +17,7 @@ const Talks = () => (
                 description
                 id
                 title
+                url
                 clips {
                   height
                   id

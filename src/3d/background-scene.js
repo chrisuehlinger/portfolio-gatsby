@@ -95,7 +95,7 @@ export default class BackgroundScene {
     this.timeUniform = { value: 0 };
     this.aboutIntensityUniform = { value: 0 };
 
-    this.refactionPass = new ShaderPass(
+    this.refractionPass = new ShaderPass(
       new THREE.ShaderMaterial({
         uniforms: {
           baseTexture: { value: null },
@@ -107,15 +107,15 @@ export default class BackgroundScene {
         defines: {}
       }), "baseTexture"
     );
-    // this.refactionPass.needsSwap = true;
+    // this.refractionPass.needsSwap = true;
     
     // this.filmPass = new FilmPass( 10.975, 1, window.innerHeight, false );
-    this.filmPass = new FilmPass( 0.5 , 0.5, window.innerHeight, false );
+    this.filmPass = new FilmPass( 0.25 , 0.75, window.innerHeight, false );
 
     this.finalComposer = new EffectComposer( this.renderer );
     this.finalComposer.addPass( this.renderScene );
     this.finalComposer.addPass( this.combinePass );
-    this.finalComposer.addPass( this.refactionPass );
+    this.finalComposer.addPass( this.refractionPass );
     this.finalComposer.addPass( this.filmPass );
 
     this.raycaster = new THREE.Raycaster();
@@ -184,13 +184,16 @@ export default class BackgroundScene {
     let timeElapsed = this.clock.getElapsedTime();
     this.timeUniform.value = timeElapsed;
 
-    this.asteroids.render({ timeDelta, timeElapsed });
+    let numberIn = this.asteroids.render({ timeDelta, timeElapsed });
+    // this.glitchPass.enabled = numberIn > 0;
 
     if(this.state.zone === 'ABOUT') {
       this.aboutIntensityUniform.value += (1-this.aboutIntensityUniform.value)*timeDelta;
     } else {
       this.aboutIntensityUniform.value -= this.aboutIntensityUniform.value*timeDelta;
     }
+
+    this.refractionPass.enabled = this.aboutIntensityUniform.value > 0.001;
 
     this.videoClips.render({ timeDelta, timeElapsed });
 

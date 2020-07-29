@@ -1,5 +1,6 @@
 - id: expansion-lesson
   title: "Lesson on Expansion"
+  url: https://chrisuehlinger.com/expansion-lesson
   company: "November 2015 - January 2016"
   clips: 
     - id: expansion-lesson-screen
@@ -12,6 +13,7 @@
     - "This is an animated, interactive lesson about the shape of the universe complete with synchronized audio narration. It's built with Reveal.js, D3 and jQuery (which seriously pulled a ton of weight as an audio engine?!). This project involved a combination of project planning, writing, editing, recording, audio editing, performance testing, cartography and a whole lot of trigonometry."
 - id: CROCUS
   title: "Crocus"
+  url: https://chrisuehlinger.com/crocus
   company: "October 2015"
   clips: 
     - id: crocus-image
@@ -24,6 +26,7 @@
     - "Crocus is Node.js based tool that visualizes how much space each part of your file tree takes up. Hover over an area of the graph to see a breadcrumb of its file path, along with how much space it is taking up. If something seems to be taking up a large amount of space, click on it to zoom in and get a more detailed look."
 - id: ARISTOTLE
   title: "Aristotle's Puzzle AI"
+  url: https://chrisuehlinger.com/aristotle-puzzle
   company: "September 2015"
   clips: 
     - id: aristotle-puzzle
@@ -37,6 +40,7 @@
       This is another AI experiment, this time using a game called [Aristotle's puzzle](http://www.amazon.com/Aristotles-Number-Classic-Wooden-Puzzle/dp/B0085JRADS). The game is built using React, Redux and React Hot Loader. The AI uses a fairly brute-force approach, the challenge came in making the validation as predictive as possible in order to reduce the number of brute force tries the computer would attempt.
 - id: QUANTUMBLOB
   title: "Quantum Blob"
+  url: https://chrisuehlinger.com/quantum-blob
   company: "August 2015"
   clips: 
     - id: quantum-blob
@@ -49,6 +53,7 @@
     - "After my visit to the LHC in August 2015, I was inspired to make this fairly rough sketch that I may use later in a lesson about Quantum Mechanics. The two colored blobs can be dragged together, causing them to combine into a single purple blob. However, the two blobs are discrete, and can be separated by multitouch gestures even though they seem homogenous when combined."
 - id: TOUCHMATH
   title: "Touch Math"
+  url: https://chrisuehlinger.com/TouchMath/problem
   company: "May 2015"
   clips: 
     - id: touch-math
@@ -61,6 +66,7 @@
     - "This lesson prototype presents the student with a simple arithmetic problem. They can solve the problem by dragging one digit on top of another and performing operations on the \"combined\" digits. When they are done, a teacher can \"play back\" their work and see all the steps that were taken to get to the answer playing in realtime."
 - id: REACTIONS
   title: "Reactions"
+  url: https://chrisuehlinger.com/Reactions
   company: "May 2015"
   clips: 
     - id: reactions
@@ -73,6 +79,7 @@
     - "This lesson prototype takes the abstract concept bonding energy and makes it into a more visceral phenomenon. Atoms and molecules can be manipulated with multitouch gestures, with bonds breaking if they are stretched too far. The amount of stretching required varies with the energy of the bond."
 - id: MONSOON
   title: "Monsoon Marketplace"
+  url: https://chrisuehlinger.com/MonsoonMarketplace
   company: "April 2015"
   clips: 
     - id: monsoon-marketplace
@@ -83,9 +90,10 @@
       height: 9
   description:
     - !markdown |
-      Another next generation lesson prototype. This one is based on the awesome work by [ThoughtCafe](http://thoughtcafe.ca/) in the Crash Course World History lesson, the [Monsoon Marketplace](https://youtu.be/a6XtBLDmPA0?t=139). Clicking or tapping on any of the cities will animate you into an article about the city and its role in the economic trade of the time (content from Wikipedia). Clicking the links to other cities will take you back to the map, where you'll be \"transported\" to the article about that city.
+      Another next generation lesson prototype. This one is based on the awesome work by [ThoughtCafe](http://thoughtcafe.ca/) in the Crash Course World History lesson, the [Monsoon Marketplace](https://youtu.be/a6XtBLDmPA0?t=139). Clicking or tapping on any of the cities will animate you into an article about the city and its role in the economic trade of the time (content from Wikipedia). Clicking the links to other cities will take you back to the map, where you'll be "transported" to the article about that city.
 - id: BRICS
   title: "BRICS"
+  url: https://chrisuehlinger.com/BRICS
   company: "April 2015"
   clips: 
     - id: brics
@@ -99,6 +107,7 @@
       A prototype for a new kind of geography lesson using D3. As you scroll to each country's section of the lesson, the globe swivels to show that country. This demo is built using content from the Wikipedia pages about the BRICS countries, Mike Bostock's [World Tour](http://bl.ocks.org/mbostock/4183330) demo and a JQuery plugin called [Waypoints](http://imakewebthings.com/waypoints/)
 - id: LAMBDABUBBLEPOP
   title: "λ Bubble Pop!"
+  url: https://chrisuehlinger.com/LambdaBubblePop
   company: "September 2014"
   clips: 
     - id: lambda-bubble-pop
@@ -109,9 +118,10 @@
       height: 9
   description:
     - !markdown |
-      This was a fork of [λ Lessons](https://stevekrouse.github.io/hs.js/), a project by Jan Paul Posma and Steve Krouse. I \"redecorated\" the function editor so that each function application was a bubble, which could be \"popped\" to reveal the result. This was a lot of fun to make, and managed to land on the front page of Hacker News as well as /r/haskell
+      This was a fork of [λ Lessons](https://stevekrouse.github.io/hs.js/), a project by Jan Paul Posma and Steve Krouse. I "redecorated" the function editor so that each function application was a bubble, which could be "popped" to reveal the result. This was a lot of fun to make, and managed to land on the front page of Hacker News as well as /r/haskell
 - id: 2048AI
   title: "2048 AI"
+  url: https://chrisuehlinger.com/2048
   company: "May 2014"
   clips: 
     - id: 2048-ai
@@ -123,3 +133,17 @@
   description:
     - !markdown |
       I forked Gabe Cirulli's hit game [2048](http://gabrielecirulli.github.io/2048/) to try to see if I could write an AI that would play the game. The resulting project taught me a lot about minimax algorithms and the limits of JavaScript performance (especially if you try to run the AI on mobile).
+- id: STGABES
+  title: "St. Gabriel's C Study Guide"
+  url: http://sg-study-c.appspot.com/
+  company: "August 2013"
+  clips: 
+    - id: sg-study-c
+      type: image
+      src: images/portfolio/sg-study-c@2x.png
+      path: images/portfolio/sg-study-c@2x.png
+      width: 16
+      height: 9
+  description:
+    - !markdown |
+      During my first semester teaching programming in Thailand, I built a study guide to help my students learn C. This was my first experience building a dynamic website, and included animated demonstrations of running code, as well as inline code editors where students could try out what they'd learned. I wrote about my experiences building this site on [my blog](/blog/2014/02/26/learnable-programming-in-thailand).

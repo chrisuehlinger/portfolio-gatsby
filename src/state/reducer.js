@@ -23,7 +23,7 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
-  console.log('ACTION', action);
+  typeof window !== 'undefined' && console.log('ACTION', action);
   const nextState = Object.assign({}, state);
 
   switch (action.type) {

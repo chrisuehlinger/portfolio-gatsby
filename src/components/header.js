@@ -1,8 +1,9 @@
 import FadeLink from '../components/FadeLink'
+import FadeAnchorLink from '../components/FadeAnchorLink'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { AnchorLink } from "@uehreka/gatsby-plugin-anchor-links";
+// import { AnchorLink } from "@uehreka/gatsby-plugin-anchor-links";
 import {
   toggleBoringMode
 } from '../state/actions';
@@ -15,7 +16,7 @@ const Header = ({ siteTitle, path, zone, isBoring }) => {
   return (
     <header className="site-header">
       <h1 className="site-title" style={{opacity: (path === '/' && zone === 'INTRO') ? 0 : 1}}>
-        <AnchorLink to="/#intro">{siteTitle}</AnchorLink>
+        <FadeAnchorLink to="/#intro">{siteTitle}</FadeAnchorLink>
       </h1>
       <div className="nav-wrapper">
         <button className="nav-toggle" onClick={() => setNavOpen(!navOpen)}>
@@ -24,16 +25,16 @@ const Header = ({ siteTitle, path, zone, isBoring }) => {
         <nav className={ navOpen ? 'nav-open' : 'nav-closed'}>
           <ul>
             <li>
-              <AnchorLink to="/#about" className={ (zone === 'ABOUT') ? 'current-location' : '' }>About</AnchorLink>
+              <FadeAnchorLink to="/#about" className={ (zone === 'ABOUT') ? 'current-location' : '' }>About</FadeAnchorLink>
             </li>
             <li>
-              <AnchorLink to="/#shows" className={ (zone === 'SHOWS') ? 'current-location' : '' }>Shows</AnchorLink>
+              <FadeAnchorLink to="/#shows" className={ (zone === 'SHOWS') ? 'current-location' : '' }>Shows</FadeAnchorLink>
             </li>
             <li>
-              <AnchorLink to="/#demos" className={ (zone === 'DEMOS') ? 'current-location' : '' }>Demos</AnchorLink>
+              <FadeAnchorLink to="/#demos" className={ (zone === 'DEMOS') ? 'current-location' : '' }>Demos</FadeAnchorLink>
             </li>
             <li>
-              <AnchorLink to="/#talks" className={ (zone === 'TALKS') ? 'current-location' : '' }>Talks</AnchorLink>
+              <FadeAnchorLink to="/#talks" className={ (zone === 'TALKS') ? 'current-location' : '' }>Talks</FadeAnchorLink>
             </li>
             <li>
               <FadeLink to="/blog" className={ (zone === 'BLOG') ? 'current-location' : '' }>Blog</FadeLink>

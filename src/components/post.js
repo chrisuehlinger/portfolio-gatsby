@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-
 import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -12,6 +11,7 @@ import {
 } from '../state/actions';
 import CodeBlock from './CodeBlock'
 import ShatteredCards from './ShatteredCards'
+import Swoop from './Swoop'
 import Layout from './layout'
 import './post.scss'
 
@@ -22,6 +22,7 @@ const shortcodes = {
   ShatteredCards
 } // Provide common components here
 
+
 const Post = ({ data: { mdx } }) => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -29,7 +30,7 @@ const Post = ({ data: { mdx } }) => {
     return () => dispatch(exitZone('BLOG'));
   }, []);
   return (
-    <Layout>
+    <Layout transitionComponent={Swoop}>
       <div className="blog-post">
         <h1>{mdx.frontmatter.title}</h1>
         <p className="post-date">{mdx.frontmatter.date.split('T')[0]}</p>

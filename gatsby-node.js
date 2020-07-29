@@ -3,8 +3,10 @@ exports.onCreateNode = async ({ node, getNode, actions }) => {
   if (node.internal.type === `Mdx`) {
     const fileNode = getNode(node.parent)
     if(fileNode.sourceInstanceName === 'posts'){
-      const date = node.frontmatter.date.toISOString().split('T')[0].replace(/-/g, '/');
-      const slug = `/blog/${date}/${fileNode.name}`
+      console.log('HMM?', node.frontmatter);
+      const date = node.frontmatter.date.toISOString ? node.frontmatter.date.toISOString() : node.frontmatter.date;
+      const dateString = date.split('T')[0].replace(/-/g, '/');
+      const slug = `/blog/${dateString}/${fileNode.name}`
       console.log('SLUG', slug);
       node.slug = slug;
       createNodeField({
@@ -18,9 +20,21 @@ exports.onCreateNode = async ({ node, getNode, actions }) => {
 exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions
   const typeDefs = [
-    "type TalksYaml implements Node { clips: [Clip] }",
-    "type ShowsYaml implements Node { clips: [Clip] }",
-    `type DemosYaml implements Node @dontInfer {
+    `type TalksYaml implements Node {
+      id: String
+      title: String
+      company: String
+      description: [String]
+      clips: [Clip]
+    }`,
+    `type ShowsYaml implements Node {
+      id: String
+      title: String
+      company: String
+      description: [String]
+      clips: [Clip]
+    }`,
+    `type DemosYaml implements Node {
       id: String
       title: String
       company: String

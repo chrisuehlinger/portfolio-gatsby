@@ -10,7 +10,7 @@ import './reset.css'
 import './super-wrapper.scss'
 
 const SuperWrapper =  (props) => {
-  console.log('PROPS', props);
+  typeof window !== 'undefined' && console.log('PROPS', props);
   const { children, path } = props;
   const dispatch = useDispatch();
   const reducerState = useSelector(state => state);
@@ -18,7 +18,6 @@ const SuperWrapper =  (props) => {
   const {
     zone,
     isLoaded,
-    loadingProgress,
     isBoring
   } = reducerState;
 
@@ -48,11 +47,6 @@ const SuperWrapper =  (props) => {
             <>
               <Header siteTitle={data.site.siteMetadata.title} path={path} zone={zone} isBoring={isBoring}/>
               {children}
-              { 
-                transitions.map(({ item, key, props }) =>
-                  item && <animated.div key={key} style={props} className="loading-indicator">{ `Loading ${loadingProgress}%` }</animated.div>
-                )
-              }
             </>
           )}
         />

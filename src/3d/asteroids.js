@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import seedrandom from 'seedrandom';
+import { number } from 'prop-types';
 
 const ENTIRE_SCENE = 0, GLITCH_SCENE = 1, DIM_SCENE = 2;
 
@@ -201,6 +202,8 @@ export default class Asteroids {
     this.asteroids.filter(asteroid => asteroid.state !== AsteroidState.OUT).map(({asteroid, rotationAxis, rotationSpeed}) => {
       asteroid[rotationAxis]((timeDelta * rotationSpeed))
     })
+
+    return numberIn;
 
   }
 }

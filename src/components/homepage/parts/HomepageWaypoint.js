@@ -31,15 +31,30 @@ const HomepageWaypoint = ({ zone, children }) => {
       }
     }
   }, [windowSize, ref]);
+  
+  const [hasEntered, setHasEntered] = useState(false);
   useEffect(() => {
-    // console.log(`ENTRY ${zone}`, entry);
-    if(entry.isIntersecting){
-      dispatch(enterZone(zone));
-    } else {
-      dispatch(exitZone(zone));
+    if(!!entry.target){
+      console.log(`ENTRY ${zone}`, entry);
+      if(entry.isIntersecting && !hasEntered){
+        setHasEntered(true);
+        dispatch(enterZone(zone));
+      } else if(!entry.isIntersecting && hasEntered) {
+        setHasEntered(false);
+        dispatch(exitZone(zone));
+      }
     }
-    return () => dispatch(exitZone(zone));
-  }, [zone, dispatch, entry]);
+  }, [zone, dispatch, entry, hasEntered]);
+
+  useEffect( () => {
+    return () => {
+      if(hasEntered) {
+        console.log('UNMOUNT', zone);
+        setHasEntered(false);
+        dispatch(exitZone(zone))
+      }
+    };
+  }, []);
 
   return (
     <div ref={ref}>

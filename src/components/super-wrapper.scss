@@ -22,19 +22,3 @@ a, a:visited {
   left:0;
   transition: opacity 1s ease-in;
 }
-
-.loading-indicator {
-  font-family: 'Lexend Zetta', sans-serif;
-  font-size: 5vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  text-transform: uppercase;
-  z-index: 1;
-}
