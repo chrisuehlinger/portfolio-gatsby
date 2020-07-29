@@ -130,11 +130,6 @@
   title: The Rocky Horror Show
   company: Haute Patooties, October 2018
   clips:
-    - id: fsedkjsdkj
-      type: image
-      path: images/crocus.png
-      width: 16
-      height: 9
     - id: rocky-lips
       type: video
       src: https://cdn.chrisuehlinger.com/show-videos/rocky-lips.mp4
