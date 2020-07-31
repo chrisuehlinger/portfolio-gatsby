@@ -4,7 +4,7 @@
   clips:
     - id: shattered-trailer
       type: video
-      src: https://cdn.chrisuehlinger.com/show-videos/ShatteredTrailer2c-transcoded.mp4
+      src: https://cdn.chrisuehlinger.com/show-videos/ShatteredTrailer2-transcoded.mp4
       width: 16
       height: 9
     - id: shattered-ai-demo

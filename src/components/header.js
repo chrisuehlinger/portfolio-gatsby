@@ -10,13 +10,13 @@ import {
 
 import './header.scss';
 
-const Header = ({ siteTitle, path, zone, isBoring }) => {
+const Header = ({ path, zone, isBoring }) => {
   const dispatch = useDispatch();
   const [navOpen, setNavOpen] = useState(false);
   return (
     <header className="site-header">
       <h1 className="site-title" style={{opacity: (path === '/' && zone === 'INTRO') ? 0 : 1}}>
-        <FadeAnchorLink to="/#intro">{siteTitle}</FadeAnchorLink>
+        <FadeAnchorLink to="/#intro">Chris Uehlinger</FadeAnchorLink>
       </h1>
       <div className="nav-wrapper">
         <button className="nav-toggle" onClick={() => setNavOpen(!navOpen)}>

@@ -73,15 +73,18 @@
 
           &.current-location {
             color: dodgerblue;
-            
           }
+        }
+
+        .material-icons {
+          transform: translateY(5px);
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .site-header {
     .site-title {
       font-size: 14px;
