@@ -31,6 +31,10 @@ function SEO({ description, lang, meta, keywords, title }) {
                 content: metaDescription,
               },
               {
+                property: 'og:image',
+                content: 'https://chrisuehlinger.com/portfolio-facebook-card.png',
+              },
+              {
                 property: 'og:type',
                 content: 'website',
               },

@@ -2,16 +2,33 @@
   title: Shattered Space
   company: The Scattered Players, June 2020
   clips:
-    - id: planet-selection
+    - id: shattered-trailer
       type: video
-      src: https://cdn.chrisuehlinger.com/show-videos/planet-selection.mp4
+      src: https://cdn.chrisuehlinger.com/show-videos/ShatteredTrailer2c-transcoded.mp4
+      width: 16
+      height: 9
+    - id: shattered-ai-demo
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/shattered-ai-demo.mp4
+      width: 16
+      height: 9
+    - id: shattered-teaser
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/shattered-teaser.mp4
+      width: 16
+      height: 9
+    - id: shattered-demo
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/shattered-demo.mp4
       width: 16
       height: 9
   description:
     - "Role: Producer, Full Stack Engineer, Actor (Chad Fastcannon), VO/Mocap Actor (Colonel Panic)"
     - "Tech: WebRTC, WebGL, Three.js, React, Redux, Redux Saga, Docker, Janus WebRTC Server, Express, Websockets, ARKit"
     - !markdown |
-      This was a fully-online interactive piece of theatre produced during (and as a response to) the COVID-19 Pandemic. You can read more about this show (and my process for building all the tech it ran on) on [my blog](/blog/2020/06/16/unshattering-the-audience-building-theatre-on-the-web-in-2020).
+      This was a fully-online interactive piece of theatre produced during (and as a response to) the COVID-19 Pandemic. I built a platform that allowed audiences to fly around a 3D solar system in groups of 5, interacting with characters played by actors from across the east coast, all acting out of their own houses on their own devices using whatever they had available for setting, props and costumes. The apps involved had to work on desktop, tablet and even mobile browsers (many actors were using phones since they have better webcams) and had to adapt to changing network conditions and unpredictable user device constraints. This is the most technological complicated project I've ever worked on, and I'm really proud of how it turned out.
+    - !markdown |
+      You can read more about this show (and my process for building all the tech it ran on) on [my blog](/blog/2020/06/16/unshattering-the-audience-building-theatre-on-the-web-in-2020).
 - id: LOVEANDINFO
   title: Love and Information
   company: Fells Point Corner Theatre, January 2020

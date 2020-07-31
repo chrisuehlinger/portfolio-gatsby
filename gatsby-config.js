@@ -2,9 +2,9 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    title: 'Chris Uehlinger',
+    title: 'Chris Uehlinger\'s Portfolio',
     description: `I'm a developer, 3D artist, projection designer, stage/voice actor and teacher based in Baltimore, MD`,
-    author: '@uehreka',
+    author: 'Chris Uehlinger',
   },
   plugins: [
     `gatsby-plugin-sass`,
