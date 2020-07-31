@@ -32,7 +32,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: 'og:image',
-                content: 'https://chrisuehlinger.com/portfolio-facebook-card.png',
+                content: 'https://chrisuehlinger.com/portfolio-facebook-card-small.png',
               },
               {
                 property: 'og:type',

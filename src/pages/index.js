@@ -29,7 +29,7 @@ const Index = (props) => {
             item && <animated.div key={key} style={props} className="loading-indicator">{ `Loading ${loadingProgress}%` }</animated.div>
           )
         }
-        <SEO title="Home" />
+        <SEO />
         <IntroPage />
 
         <AboutPage />
