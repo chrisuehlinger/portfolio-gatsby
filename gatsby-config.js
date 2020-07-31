@@ -137,11 +137,11 @@ module.exports = {
         // Set Variation ID. 0 for original 1,2,3....
         // variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
         // Defers execution of google analytics script after page load
-        defer: true,
+        // defer: true,
         // Any additional optional fields
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: "chrisuehlinger.com",
+        // sampleRate: 5,
+        // siteSpeedSampleRate: 10,
+        // cookieDomain: "chrisuehlinger.com",
       },
     },
     {
