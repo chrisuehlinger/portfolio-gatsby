@@ -1,3 +1,17 @@
+- id: BROKENMIRRORS
+  title: The Battle of Broken Mirrors
+  company: The Scattered Players, October 2020
+  clips:
+    - id: mirrors-trailer
+      type: video
+      src: https://cdn.chrisuehlinger.com/show-videos/MirrorsTrailer1e.mp4
+      width: 16
+      height: 9
+  description:
+    - "Role: Producer, Full Stack Engineer, 3D Animator, Actor (Widget of G'Mail)"
+    - "Tech: WebRTC, WebGL, Three.js, React, Redux, Redux Saga, Docker, Janus WebRTC Server, Express, Websockets, ARKit"
+    - !markdown |
+      This was the second online interactive immersive theatre show produced by the Scattered Players. Conceived by Brett Messiora and directed by Teresa Attridge and Deirdre McCallister, this show explored themes of good and evil through the lens of high fantasy.
 - id: SHATTEREDSPACE
   title: Shattered Space
   company: The Scattered Players, June 2020

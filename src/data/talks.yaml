@@ -1,3 +1,31 @@
+- id: WEBRTC2
+  title: "WebRTC: A STUNning TURN of Events"
+  url: https://docs.google.com/presentation/d/1sMykfr7jHEnqP3LzEtlmjMEWqrzH1_JkpqS9ypyS95o/edit?usp=sharing
+  company: "charmCityJS, December 2020"
+  clips:
+    - id: webrtc2-collage
+      type: image
+      src: images/portfolio/webrtc2-collage.png
+      path: images/portfolio/webrtc2-collage.png
+      width: 16
+      height: 9
+  description:
+    - !markdown |
+      This was my second of two talks about WebRTC. This one focused on RTCPeerConnection and the why/how of ICE. You can see the whole talk [on YouTube](https://www.youtube.com/watch?v=YLPRBYTeoF4)!
+- id: WEBRTC1
+  title: "WebRTC, But Hold The Ice"
+  url: https://docs.google.com/presentation/d/1eOpwSRAhFzJERtK-FndVDC5uiNF5N8wwMx7wViVvecU/edit?usp=sharing
+  company: "charmCityJS, October 2020"
+  clips:
+    - id: webrtc1-iceberg
+      type: image
+      src: images/portfolio/webrtc1-iceberg.png
+      path: images/portfolio/webrtc1-iceberg.png
+      width: 16
+      height: 9
+  description:
+    - !markdown |
+      This was my first of two talks about WebRTC. This one focused on getUserMedia, MediaStreams, and what you could do with them. You can see the whole talk [on YouTube](https://www.youtube.com/watch?v=jAyI8EB0-OQ)!
 - id: UNSHATTERING
   title: "Unshattering the Audience: Building Theatre on the Web in 2020"
   url: https://docs.google.com/presentation/d/17DFPZ13CoJ-SL8V42TOj9rxjJaSqabUksPRnBPp_yIU/edit?usp=sharing
