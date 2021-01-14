@@ -29,6 +29,12 @@ const About = () => {
             <p>
             Hi there! My name is Chris Uehlinger. I'm a... well I do a lot of stuff, including web development, projection/video design for theatre, VR development, voiceover work, 3D graphics and I've taught programming both abroad (at โรงเรียนเซนต์คาเบรียล in Bangkok) and stateside (through talks at charmCityJS and volunteering for Baltimore NodeSchool).
             </p>
+            <div className="about-links">
+              <a href="mailto:chris.uehlinger@gmail.com">
+                <i className="material-icons">mail_outline</i>
+                chris.uehlinger@gmail.com
+              </a>
+            </div>
           </div>
         </div>
       </div>
