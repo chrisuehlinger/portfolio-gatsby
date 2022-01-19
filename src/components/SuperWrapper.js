@@ -17,9 +17,9 @@ const SuperWrapper =  (props) => {
   console.log('STATE', reducerState);
   const {
     zone,
-    isLoaded,
     isBoring
   } = reducerState;
+  const isLoaded = true;
 
   
   const transitions = useTransition(!isLoaded, null, {

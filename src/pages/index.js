@@ -24,11 +24,11 @@ const Index = (props) => {
   return (
     <Wrapper transitionComponent={Swoop}>
       <main className={'homepage-body ' + (isLoaded ? 'has-loaded' : 'is-loading')}>
-        { 
+        {/* { 
           transitions.map(({ item, key, props }) =>
             item && <animated.div key={key} style={props} className="loading-indicator">{ `Loading ${loadingProgress}%` }</animated.div>
           )
-        }
+        } */}
         <SEO title="Portfolio" />
         <IntroPage />
 

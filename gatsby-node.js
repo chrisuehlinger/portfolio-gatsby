@@ -3,11 +3,11 @@ exports.onCreateNode = async ({ node, getNode, actions }) => {
   if (node.internal.type === `Mdx`) {
     const fileNode = getNode(node.parent)
     if(fileNode.sourceInstanceName === 'posts'){
-      console.log('HMM?', node.frontmatter);
+      // console.log('HMM?', node.frontmatter);
       const date = node.frontmatter.date.toISOString ? node.frontmatter.date.toISOString() : node.frontmatter.date;
       const dateString = date.split('T')[0].replace(/-/g, '/');
       const slug = `/blog/${dateString}/${fileNode.name}`
-      console.log('SLUG', slug);
+      // console.log('SLUG', slug);
       node.slug = slug;
       createNodeField({
         node,

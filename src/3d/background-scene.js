@@ -4,8 +4,8 @@ import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js';
 import { GlitchPass } from './GlitchPass.js';
 import { FilmPass } from 'three/examples/jsm/postprocessing/FilmPass';
-import { WaterRefractionShader } from 'three/examples/jsm/shaders/WaterRefractionShader.js';
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
+// import { WaterRefractionShader } from 'three/examples/jsm/shaders/WaterRefractionShader.js';
+// import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import seedrandom from 'seedrandom';
 import baseVertShader from 'raw-loader!./glsl/base-vert.glsl'
 import glitchFragShader from 'raw-loader!./glsl/glitch-frag.glsl'
@@ -54,12 +54,32 @@ export default class BackgroundScene {
     this.renderer.physicallyCorrectLights = true;
     
     this.scene = new THREE.Scene();
-    let skyboxRes = 2048;
+    let skyboxRes = 512;
+    const fileType = 'png';
     this.skybox = new THREE.CubeTextureLoader(this.loadingManager).setPath(`https://cdn.chrisuehlinger.com/3d/skybox/${skyboxRes}/`).load([
-      'right.png', 'left.png',
-      'top.png', 'bottom.png',
-      'front.png', 'back.png'
-    ]);
+      `right.${fileType}`, `left.${fileType}`,
+      `top.${fileType}`, `bottom.${fileType}`,
+      `front.${fileType}`, `back.${fileType}`
+    ], () => {
+      if(window.innerWidth > 3000 || window.innerHeight > 3000) {
+        skyboxRes = 4096;
+      } else if(window.innerWidth > 1000 || window.innerHeight > 1000) {
+        skyboxRes = 2048;
+      } else {
+        skyboxRes = 1024;
+      }
+      console.log('GETTING BETTER SKYBOX', skyboxRes);
+      new THREE.CubeTextureLoader().setPath(`https://cdn.chrisuehlinger.com/3d/skybox/${skyboxRes}/`).load([
+        `right.${fileType}`, `left.${fileType}`,
+        `top.${fileType}`, `bottom.${fileType}`,
+        `front.${fileType}`, `back.${fileType}`
+      ], (highResSkybox) => {
+        const oldSkybox = this.skybox;
+        this.skybox = highResSkybox;
+        this.scene.background = this.skybox;
+        oldSkybox.dispose();
+      });
+    });
     this.blackSkybox = new THREE.Color(0x000000);
     this.scene.background = this.skybox;
     

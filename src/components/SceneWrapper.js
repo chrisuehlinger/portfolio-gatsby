@@ -40,12 +40,9 @@ export default class SceneWrapper extends React.Component {
   }
   
   render() {
-    const {
-      isLoaded
-    } = this.props.reducerState;
     return (
       <>
-        <canvas className="background-canvas" ref="backgroundCanvas" style={{opacity: isLoaded ? 1 : 0}}></canvas>
+        <canvas className="background-canvas" ref="backgroundCanvas"></canvas>
       </>
     );
   }

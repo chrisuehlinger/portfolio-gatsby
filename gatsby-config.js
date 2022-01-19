@@ -7,6 +7,12 @@ module.exports = {
     author: 'Chris Uehlinger',
   },
   plugins: [
+    // {
+    //   resolve: `gatsby-plugin-compile-es6-packages`,
+    //   options: {
+    //     modules: [`three`],
+    //   }
+    // },
     `gatsby-plugin-sass`,
     'gatsby-plugin-react-helmet',
     {
@@ -161,4 +167,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ],
-}
+};
