@@ -48,7 +48,7 @@ export default class BackgroundScene {
     this.materials = {};
 
     this.renderer = new THREE.WebGLRenderer( { canvas, antialias: true } );
-    // this.renderer.setPixelRatio( window.devicePixelRatio );
+    this.renderer.setPixelRatio( window.devicePixelRatio );
     this.renderer.setSize( window.innerWidth, window.innerHeight );
     this.renderer.toneMapping = THREE.ReinhardToneMapping;
     this.renderer.physicallyCorrectLights = true;
@@ -61,9 +61,9 @@ export default class BackgroundScene {
       `top.${fileType}`, `bottom.${fileType}`,
       `front.${fileType}`, `back.${fileType}`
     ], () => {
-      if(window.innerWidth > 3000 || window.innerHeight > 3000) {
+      if(window.devicePixelRatio * window.innerWidth > 3000 || window.devicePixelRatio * window.innerHeight > 3000) {
         skyboxRes = 4096;
-      } else if(window.innerWidth > 1000 || window.innerHeight > 1000) {
+      } else if(window.devicePixelRatio * window.innerWidth > 1000 || window.devicePixelRatio * window.innerHeight > 1000) {
         skyboxRes = 2048;
       } else {
         skyboxRes = 1024;
@@ -185,6 +185,7 @@ export default class BackgroundScene {
     this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
 
+    this.renderer.setPixelRatio( window.devicePixelRatio );
     this.renderer.setSize( width, height );
 
     this.glitchComposer.setSize( width, height );

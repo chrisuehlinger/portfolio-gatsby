@@ -88,7 +88,7 @@ export default class Asteroids {
     var onProgress = function (xhr) {
       if (xhr.lengthComputable) {
         var percentComplete = xhr.loaded / xhr.total * 100;
-        console.log(Math.round(percentComplete, 2) + '% downloaded');
+        // console.log(Math.round(percentComplete, 2) + '% downloaded');
       }
     };
 
@@ -99,18 +99,19 @@ export default class Asteroids {
       color: 0x999999,
       roughness: 0.7
     })
-    var loader = new FBXLoader(this.loadingManager);
-    loader.setPath(`https://cdn.chrisuehlinger.com/3d/asteroids/`).load(`asteroids.fbx`, ( object ) => {
-      object.traverse(child => {
-        if ( child.isMesh ) {
-          child.castShadow = true;
-          child.receiveShadow = true;
-        }
-      });
-      let asteroidObjects = [...object.children[0].children];
-      this.asteroids = [];
-      for (let i=0; i < asteroidObjects.length; i++){
-        let asteroid = asteroidObjects[i];
+    var loader = new FBXLoader();
+    loader.setPath(`https://cdn.chrisuehlinger.com/3d/asteroids/`);
+    const ASTEROID_COUNT = 14;
+    for(let i = 1; i <= ASTEROID_COUNT; i++) {
+      loader.load(`asteroid-c-${i}.fbx`, ( object ) => {
+        console.log(`ASTEROID ${i} LOADED: `, object);
+        object.traverse(child => {
+          if ( child.isMesh ) {
+            child.castShadow = true;
+            child.receiveShadow = true;
+          }
+        });
+        let asteroid = object.children[0];
         asteroid.material.dispose();
         asteroid.material = asteroidMaterial;
         let randFactor = 8;
@@ -142,9 +143,9 @@ export default class Asteroids {
           timeout: null
         };
         this.asteroids.push(asteroidObject);
-        setupAsteroidGlitch(asteroidObject, i, asteroidObjects.length, this.rng);
-      }
-    }, onProgress, onError );
+        setupAsteroidGlitch(asteroidObject, i, ASTEROID_COUNT, this.rng);
+      }, onProgress, onError );
+    }
 
     this.lights = [];
     this.lightsOn = false;
