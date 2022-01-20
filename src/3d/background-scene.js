@@ -52,10 +52,18 @@ export default class BackgroundScene {
     this.renderer.setSize( window.innerWidth, window.innerHeight );
     this.renderer.toneMapping = THREE.ReinhardToneMapping;
     this.renderer.physicallyCorrectLights = true;
+
+    const supportsWebP = (function() {
+      let webpCanvas = document.createElement('canvas');
+      webpCanvas.width = 1;
+      webpCanvas.height = 1;
+      return webpCanvas.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+    })();
+    console.log('SUPPORTS WEBP?', supportsWebP);
     
     this.scene = new THREE.Scene();
     let skyboxRes = 512;
-    const fileType = 'png';
+    let fileType = supportsWebP ? 'webp' : 'png';
     this.skybox = new THREE.CubeTextureLoader(this.loadingManager).setPath(`https://cdn.chrisuehlinger.com/3d/skybox/${skyboxRes}/`).load([
       `right.${fileType}`, `left.${fileType}`,
       `top.${fileType}`, `bottom.${fileType}`,
