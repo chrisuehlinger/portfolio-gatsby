@@ -40,7 +40,7 @@
     "remark-unwrap-images": "^2.0.0",
     "seedrandom": "^3.0.5",
     "stats.js": "^0.17.0",
-    "three": "^0.127.0"
+    "three": "^0.137.0"
   },
   "keywords": [
     "gatsby"
